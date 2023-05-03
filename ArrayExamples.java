@@ -3,27 +3,29 @@
 public class ArrayExamples {
 
   // Changes the input array to be in reversed order
-  // static void reverseInPlace(int[] arr) {
-  //   for(int i = 0; i < arr.length; i += 1) {
-  //     arr[i] = arr[arr.length - i - 1];
-
-
+  //BUGGY METHOD
+  static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = arr[arr.length - i - 1];
+    }
+  }
     
   //   }
   // }
-
-    static void reverseInPlace(int[] arr){
-      int[] copyArray = new int[arr.length];
-      for (int i = 0; i < arr.length; i += 1) {
-        copyArray[i] = arr[i];
-      }
-      for(int i = 0; i < arr.length; i += 1) {
-        arr[i] = copyArray[arr.length - i - 1];
-      }
-    }
+    //FIXED METHOD
+    // static void reverseInPlace(int[] arr){
+    //   int[] copyArray = new int[arr.length];
+    //   for (int i = 0; i < arr.length; i += 1) {
+    //     copyArray[i] = arr[i];
+    //   }
+    //   for(int i = 0; i < arr.length; i += 1) {
+    //     arr[i] = copyArray[arr.length - i - 1];
+    //   }
+    // }
 
   // Returns a *new* array with all the elements of the input array in reversed
   // order
+  
   static int[] reversed(int[] arr){
     int[] copyArray = new int[arr.length];
     for(int i = 0; i < arr.length; i += 1) {
